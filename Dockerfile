@@ -4,7 +4,7 @@ WORKDIR /src
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN chown -R appuser:appgroup /src
+RUN chown -R appuser:appgroup /app
 EXPOSE 8080
 USER appuser
 CMD [ "npm", "start" ]
